@@ -37,7 +37,6 @@ async function login() {
   }
 
 //INTERARIVIDADE DA PÁGINA PRINCIPAL
-//precisa rever poque nao esta fincionando essa parte do botão mudar de cor
 // Função para mudar a cor dos botões e aplicar a mudança em outra página
 function clicar(btnClicado) {
     // Seleciona os elementos HTML dos botões

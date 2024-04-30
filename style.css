@@ -188,6 +188,12 @@ aside.login{
     box-shadow: none;
     border-color: #002908;
 }
+.oper_pag_princ.ativo{
+    background-color: white;
+    color: #00350A;
+    border-color: #00350A ;
+    font-weight: bolder;
+}
 
 /*Estilo dos botões de decisão*/
 .decisoes_pag_princ{
