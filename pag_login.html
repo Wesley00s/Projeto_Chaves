@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" type="javascript"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Login</title>
@@ -12,22 +11,23 @@
     <main>
         <div id="login">
            <aside class="login"><!--Parte de login-->
-            <h1 id="h1_login">Controle do Registro de Chaves</h1><!--Nome do programa-->
+            <h1 id="h1_login">Controle do Registro de Chaves</h1><!--Nome do programa "Títulona parte superior"-->
             <img src="img/Boa Viagem-02-pq.png" alt="logo ifce" id="logo_login">
             <h4 class="h4_login">
-                <label for="usuario">Usuário</label></h4><!--entrada de dados do usuario-->
-            <input type="text" class="dados_login" name="usuario">
+                <label for="usuario">Usuário</label></h4><!--Entrada de dados do usuário-->
+            <input type="text" class="dados_login" name="usuario" required>
             <br>
             <h4 class="h4_login">
-                <label for="senha">Senha</label></h4><!--entrada de senha do usuario-->
-            <input type="password" class="dados_login" name="senha">
+                <label for="senha">Senha</label></h4><!--Entrada de senha do usuário-->
+            <input type="password" class="dados_login" name="senha" required>
             <br>
-            <button id="enter_login"><a href="pag_principal.html" id="link_login" >Entrar</a></button><!--Botao de etrada para página principal-->
+            <button id="enter_login" onclick="login()">Entrar</button><!--Botão de entrada para página principal-->
            </aside> 
         </div>
-        <div><!--Aqui contem apenas a imagem do campus-->
+        <div><!--Aqui contém apenas a imagem do campus-->
             <img src="img/Foto_Nova_IF.jpg" alt="foto do campus boa viagem" id="img_login">
         </div>
     </main>
+    <script src="script.js"></script><!--Link para integrar o código Java Script ao HTML-->
 </body>
 </html>

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" type="javascript"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Controle de chaves</title>
@@ -15,7 +14,7 @@
 
     <main id="main_pag_princ">
                 <p id="dados_line_sup">
-                <label for="mes" class="label_pag_princ">Mês:</label><!--Inseir mês-->
+                <label for="mes" class="label_pag_princ">Mês:</label><!--Inserir mês-->
                 <select name="mes" id="mes_pag_princ">
                     <option value="mes">Mês</option>
                     <option value="jan">Janeiro</option>
@@ -32,10 +31,10 @@
                     <option value="dez">Dezembro</option>
                 </select>
             
-                <label for="data" class="label_pag_princ">Data:</label><!--inserir dia-->
+                <label for="data" class="label_pag_princ">Data:</label><!--Inserir dia-->
                       <input type="date" name="data" class="dados_pag_princ">
 
-                <label for="setor" class="label_pag_princ">Setor:</label><!--inserir sala/ setor-->
+                <label for="setor" class="label_pag_princ">Setor:</label><!--Inserir sala / setor-->
                 <select name="setor" id="setor_pag_princ">
                     <option value="setor" selected>Setor</option>
                     <option value="01">Sala 01</option>
@@ -62,28 +61,29 @@
                         </p>
 
                  <p>
-              <label for="operacao" class="label_pag_princ">Selecione a operação requerida:</label><!--selecionar a entrega ou devolução-->
-              <button class="oper_pag_princ" name="operacao">Entrega</button>
-              <button class="oper_pag_princ" name="operacao">Devolução</button>
+              <label for="operacao" class="label_pag_princ">Selecione a operação requerida:</label><!--Selecionar a entrega ou devolução-->
+              <button class="oper_pag_princ" id="entrega" name="operacao" onclick="clicar(this)">Entrega</button>
+              <button class="oper_pag_princ" id="devolucao" name="operacao" onclick="clicar()">Devolução</button>
                  </p>
 
                  <p>
-                <label for="responsavel" class="label_pag_princ">Responsável:</label><!--preeencher quem pe o responsável-->
+                <label for="responsavel" class="label_pag_princ">Responsável:</label><!--Preeencher quem é o responsável-->
                       <input type="text" id="resp_pag_princ" name="responsavel">
-                <label for="horario" class="label_pag_princ">Horário: </label><!--preencer o horario em que a chave foi pega/devolvida-->
+                <label for="horario" class="label_pag_princ">Horário: </label><!--Preencher o horário em que a chave foi pega/devolvida-->
                       <input type="time" class="dados_pag_princ" name="horario">
                     </p>
 
                     <br>
                     <p>         
-                <button class="decisoes_pag_princ">Registrar</button><!--para registar a entrega ou devolução da chave-->
+                <button class="decisoes_pag_princ">Registrar</button><!--Para registar a entrega ou devolução da chave-->
                 <br>
-                    <a href="pag_chaves.html" target="_blank" class="decisoes_pag_princ" class="link_pag_princ">Ver Chaves</a><!--para ir para a pagina chaves-->
+                    <button target="_blank" class="decisoes_pag_princ" class="link_pag_princ" onclick="abrir_pag_chave()">Ver chaves</button><!--Para ir para a página chaves-->
                 <br>
-                    <a href="Pag_registros.html" target="_blank" class="decisoes_pag_princ" class="link_pag_princ">Registro de Chaves</a><!--para ir para a pagina de registros-->
+                   <button target="_blank" class="decisoes_pag_princ" class="link_pag_princ" onclick="abrir_pag_registros()">Registros de Chaves</button><!--Para ir para a página de registros-->
                  </p>
     </main>
     <br>
+    <script src="script.js"></script>
     <footer></footer>
 </body>
 </html>
