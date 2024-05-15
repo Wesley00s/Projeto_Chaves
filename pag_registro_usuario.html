@@ -9,32 +9,36 @@
 </head>
 <body class="pag_login">
     <main>
-
+        <title>Registrar</title>
         <div id="login">
-
            <aside class="login"><!--Parte de login-->
-
-            <h1 id="h1_login">Controle do Registro de Chaves - Login</h1><!--Nome do programa "Títulona parte superior"-->
+            <h1 id="h1_login">Controle do Registro de Chaves - Criar registro</h1><!--Nome do programa "Títulona parte superior"-->
             <img src="img/Boa Viagem-02-pq.png" alt="logo ifce" id="logo_login">
             <h4 class="h4_login">
                 <label for="usuario">Usuário</label></h4><!--Entrada de dados do usuário-->
             <input type="text" class="dados_login" name="usuario" required>
             <br>
             <h4 class="h4_login">
-                <label for="senha">Senha</label></h4><!--Entrada de senha do usuário-->
-            <input type="password" class="dados_login" name="senha" required>
+                <label for="senha">Senha</label></h4><!--Confirmar senha do usuário-->
+            <input type="password" class="dados_login" name="senha1" required>
+
+            <br>
+
+            <h4 class="h4_login">
+                <label for="senha">Confirmar senha</label></h4><!--Entrada de senha do usuário-->
+            <input type="password" class="dados_login" name="senha2" required>
             <br>
             <button id="enter_login"">Entrar</button><!--Botão de entrada para página principal-->
             <div class="register">
-                <a href="./pag_registro_usuario.html">Não tem conta? Clicar aqui para criar registro</a>
+                <a href="./pag_login.html">Já tem conta? Clicar aqui para fazer login</a>
             </div>
+
            </aside> 
         </div>
         <div><!--Aqui contém apenas a imagem do campus-->
             <img src="img/Foto_Nova_IF.jpeg" alt="foto do campus boa viagem" id="img_login">
         </div>
-        
     </main>
-    <script src="login.js"></script><!--Link para integrar o código Java Script ao HTML-->
+    <script src="registro_usuario.js"></script><!--Link para integrar o código Java Script ao HTML-->
 </body>
 </html>

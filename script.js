@@ -2,39 +2,42 @@
 
 //INTERATIVIDADE PÁGINA DE LOGIN
 // Função assíncrona para lidar com o login
-async function login() {
-    // Obtém o valor dos campos de usuário e senha
-    const username = document.getElementById('username').value;
-    // Obtém o valor do campo de senha
-    const password = document.getElementById('password').value;
+// async function login() {
+//     // Obtém o valor dos campos de usuário e senha
+//     const username = document.getElementById('username').value;
+//     // Obtém o valor do campo de senha
+//     const password = document.getElementById('password').value;
+
+//     console.log(username)
+//     console.log(password)
   
-    try {
-      // Envia uma requisição POST para a URL especificada, com os dados de usuário e senha no corpo da requisição
-      const response = await fetch('http://exemplo.com/login', {
-        // Método da requisição
-        method: 'POST',
-        // Tipo de conteúdo da requisição
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        // Corpo da requisição, convertido para JSON
-        body: JSON.stringify({ username, password })
-      });
+//     try {
+//       // Envia uma requisição POST para a URL especificada, com os dados de usuário e senha no corpo da requisição
+//       const response = await fetch('http://127.0.0.1:8080/login', {
+//         // Método da requisição
+//         method: 'POST',
+//         // Tipo de conteúdo da requisição
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         // Corpo da requisição, convertido para JSON
+//         body: JSON.stringify({ username, password })
+//       });
   
-      // Verifica se a resposta da requisição foi bem-sucedida
-      if (response.ok) {
-        // Redireciona para a página principal
-        window.location.href = "pag_principal.html";
-      } else {
-        // Se a resposta não foi bem-sucedida, exibe uma mensagem de usuário ou senha inválidos
-        alert("Usuário ou senha inválidos. Por favor verifique se está digitando corretamente.");
-      }
-    } catch (error) {
-      // Se ocorrer um erro durante a requisição, exibe uma mensagem de erro genérica
-      console.error('Erro ao fazer login:', error);
-      alert('Erro ao fazer login. Verifique sua conexão com a internet.');
-    }
-  }
+//       // Verifica se a resposta da requisição foi bem-sucedida
+//       if (response.ok) {
+//         // Redireciona para a página principal
+//         window.location.href = "pag_principal.html";
+//       } else {
+//         // Se a resposta não foi bem-sucedida, exibe uma mensagem de usuário ou senha inválidos
+//         alert("Usuário ou senha inválidos. Por favor verifique se está digitando corretamente.");
+//       }
+//     } catch (error) {
+//       // Se ocorrer um erro durante a requisição, exibe uma mensagem de erro genérica
+//       console.error('Erro ao fazer login:', error);
+//       alert('Erro ao fazer login. Verifique sua conexão com a internet.');
+//     }
+//   }
 
 //INTERARIVIDADE DA PÁGINA PRINCIPAL
 // Função para mudar a cor dos botões e aplicar a mudança em outra página
@@ -64,7 +67,7 @@ function clicar(btnClicado) {
   
     try {
       // Envia uma requisição POST para a URL especificada, com os dados do formulário no corpo da requisição
-      const response = await fetch('http://exemplo.com/registrar_dados', {
+      const response = await fetch('http://127.0.0.1:8080/registrar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Função para carregar os registros da API e atualizar a tabela na página
 function carregarRegistros() {
     // Faz uma requisição GET para a API de registros
-    fetch('http://localhost:3000/api/registros')
+    fetch('http://127.0.0.1:8080//registros')
         // Processa a resposta da requisição como JSON
         .then(response => response.json())
         // Quando os registros são recebidos com sucesso, executa o seguinte bloco de código
